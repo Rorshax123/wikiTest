@@ -20,7 +20,7 @@ public class FirstTest{
         capabilities.setCapability("automationName","Appium");
         capabilities.setCapability("appPackage","org.wikipedia");
         capabilities.setCapability("appActivity",".main.MainActivity");
-        capabilities.setCapability("app","/Users/hasan/Desktop/javaAppiumAutomation/apks/org.wikipedia_50330_apps.evozi.com.apk");
+        capabilities.setCapability("app","/Users/hasan/Desktop/wikiTest/apks/org.wikipedia.apk");
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
     }
@@ -32,6 +32,7 @@ public class FirstTest{
 
     @Test
     public void firstTest(){
-        System.out.println("FirstTest");
+
+        WebElement element = driver.findElement
     }
 }
