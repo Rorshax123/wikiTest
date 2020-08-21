@@ -86,7 +86,7 @@ public class FirstTest {
     }
 
     @Test
-    public void testCompareArticleTitle(){
+    public void testCompareArticleTitle() {
 
         waitForElementAndClick(
                 By.xpath("//*[contains(@text, 'Search Wikipedia')]"),
@@ -108,13 +108,13 @@ public class FirstTest {
 
         );
 
-       WebElement titleElement=  waitForElementPresent(
-               By.id("org.wikipedia:id/view_page_title_text"),
-               "Cannot find title of object oriented programming",
-               15
-       );
+        WebElement titleElement = waitForElementPresent(
+                By.id("org.wikipedia:id/view_page_title_text"),
+                "Cannot find title of object oriented programming",
+                15
+        );
 
-       String articleTitle = titleElement.getAttribute("text");
+        String articleTitle = titleElement.getAttribute("text");
 
         Assert.assertEquals(
                 "Founded unexpected article",
@@ -122,6 +122,18 @@ public class FirstTest {
                 articleTitle
         );
 
+
+    }
+
+    @Test
+    public void testTextOfSearchField(){
+        assertElementHasText(
+                By.xpath("//*[@resource-id='org.wikipedia:id/search_container']//*[@text='Search Wikipedia']"),
+                "Cannot find search text",
+                "Search Wikipedia",
+                5
+
+        );
     }
 
 
@@ -157,4 +169,30 @@ public class FirstTest {
                 ExpectedConditions.invisibilityOfElementLocated(by)
         );
     }
+
+    private void assertElementHasText(By by, String errorMessage, String expectedText, long timeoutInSeconds) {
+        WebElement element = waitForElementPresent(
+                by,
+                "Cannot find an element",
+                timeoutInSeconds
+
+        );
+
+        String elementWithText = element.getText();
+
+        if(elementWithText.length() > 0)
+        Assert.assertEquals(
+                errorMessage,
+                expectedText,
+                elementWithText
+        );
+        else {
+            System.out.println("Element has not text");
+            Assert.fail();
+
+        }
+
+    }
+
+
 }

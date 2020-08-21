@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb29c2e6-27d3-4319-819d-25988d5d7e07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wikiTest.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/FirstTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/FirstTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,30 +19,33 @@
         <counts>
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="1" />
           <entry key="java" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="1" />
           <entry key="JAVA" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1379" />
+          <entry key="java" value="2095" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1379" />
+          <entry key="JAVA" value="2095" />
         </counts>
       </usages-collector>
     </session>
@@ -54,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1443">
-              <caret line="122" column="10" selection-start-line="122" selection-start-column="10" selection-end-line="122" selection-end-column="10" />
+            <state relative-caret-position="-538">
+              <caret line="130" column="106" selection-start-line="130" selection-start-column="106" selection-end-line="130" selection-end-column="106" />
             </state>
           </provider>
         </entry>
@@ -88,7 +89,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,13 +105,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597990565748" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598002261896" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -127,7 +128,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FirstTest.testCompareArticleTitle">
+  <component name="RunManager" selected="JUnit.FirstTest.testTextOfSearchField">
     <configuration name="FirstTest.firstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wikiTest" />
       <option name="PACKAGE_NAME" value="" />
@@ -158,13 +159,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FirstTest.testTextOfSearchField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wikiTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="testTextOfSearchField" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.FirstTest.firstTest" />
       <item itemvalue="JUnit.FirstTest.testCancelButton" />
       <item itemvalue="JUnit.FirstTest.testCompareArticleTitle" />
+      <item itemvalue="JUnit.FirstTest.testTextOfSearchField" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FirstTest.testTextOfSearchField" />
         <item itemvalue="JUnit.FirstTest.testCompareArticleTitle" />
         <item itemvalue="JUnit.FirstTest.firstTest" />
         <item itemvalue="JUnit.FirstTest.testCancelButton" />
@@ -184,50 +197,50 @@
       <workItem from="1597916191649" duration="3401000" />
       <workItem from="1597931234092" duration="61000" />
       <workItem from="1597981818557" duration="1127000" />
-      <workItem from="1597987474377" duration="1715000" />
+      <workItem from="1597987474377" duration="6564000" />
+      <workItem from="1597997792090" duration="1088000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FirstTest_firstTest - 2020.08.20 at 14h 39m 50s.xml">
-      <configuration name="FirstTest.firstTest" configurationId="JUnit" />
+    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 28m 02s.xml">
+      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_firstTest - 2020.08.20 at 14h 40m 22s.xml">
-      <configuration name="FirstTest.firstTest" configurationId="JUnit" />
+    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 29m 28s.xml">
+      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_firstTest - 2020.08.20 at 16h 21m 17s.xml">
-      <configuration name="FirstTest.firstTest" configurationId="JUnit" />
+    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 29m 50s.xml">
+      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_firstTest - 2020.08.20 at 16h 22m 13s.xml">
-      <configuration name="FirstTest.firstTest" configurationId="JUnit" />
+    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 31m 40s.xml">
+      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_firstTest - 2020.08.20 at 16h 46m 39s.xml">
-      <configuration name="FirstTest.firstTest" configurationId="JUnit" />
+    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 32m 22s.xml">
+      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_firstTest - 2020.08.20 at 16h 49m 17s.xml">
-      <configuration name="FirstTest.firstTest" configurationId="JUnit" />
+    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 32m 57s.xml">
+      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_firstTest - 2020.08.20 at 17h 04m 35s.xml">
-      <configuration name="FirstTest.firstTest" configurationId="JUnit" />
+    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 33m 27s.xml">
+      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testCancelButton - 2020.08.21 at 10h 51m 21s.xml">
-      <configuration name="FirstTest.testCancelButton" configurationId="JUnit" />
+    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 13h 26m 00s.xml">
+      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_firstTest - 2020.08.21 at 10h 51m 56s.xml">
-      <configuration name="FirstTest.firstTest" configurationId="JUnit" />
+    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 13h 26m 28s.xml">
+      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testCompareArticleTitle - 2020.08.21 at 11h 16m 40s.xml">
-      <configuration name="FirstTest.testCompareArticleTitle" configurationId="JUnit" />
+    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 13h 28m 37s.xml">
+      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6304000" />
+    <option name="totallyTimeSpent" value="12241000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="978" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25772098" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2603834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -236,7 +249,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -264,10 +277,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/libs/selenium-server-standalone-3.4.0.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1443">
-          <caret line="122" column="10" selection-start-line="122" selection-start-column="10" selection-end-line="122" selection-end-column="10" />
+        <state relative-caret-position="-538">
+          <caret line="130" column="106" selection-start-line="130" selection-start-column="106" selection-end-line="130" selection-end-column="106" />
         </state>
       </provider>
     </entry>
