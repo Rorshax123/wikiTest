@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb29c2e6-27d3-4319-819d-25988d5d7e07" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/FirstTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/FirstTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,13 +16,14 @@
     <session id="-2005741193">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -40,12 +40,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2095" />
+          <entry key="java" value="2161" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2095" />
+          <entry key="JAVA" value="2161" />
         </counts>
       </usages-collector>
     </session>
@@ -55,8 +55,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-538">
-              <caret line="130" column="106" selection-start-line="130" selection-start-column="106" selection-end-line="130" selection-end-column="106" />
+            <state relative-caret-position="703">
+              <caret line="183" column="170" selection-start-line="183" selection-start-column="170" selection-end-line="183" selection-end-column="170" />
+              <folding>
+                <element signature="method#setUp#0;class#FirstTest#0" />
+                <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,6 +93,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -106,13 +111,12 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598002261896" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598004089291" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -128,7 +132,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FirstTest.testTextOfSearchField">
+  <component name="RunManager" selected="JUnit.FirstTest.cancelSearch">
+    <configuration name="FirstTest.cancelSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wikiTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="cancelSearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FirstTest.firstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wikiTest" />
       <option name="PACKAGE_NAME" value="" />
@@ -174,9 +188,11 @@
       <item itemvalue="JUnit.FirstTest.testCancelButton" />
       <item itemvalue="JUnit.FirstTest.testCompareArticleTitle" />
       <item itemvalue="JUnit.FirstTest.testTextOfSearchField" />
+      <item itemvalue="JUnit.FirstTest.cancelSearch" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FirstTest.cancelSearch" />
         <item itemvalue="JUnit.FirstTest.testTextOfSearchField" />
         <item itemvalue="JUnit.FirstTest.testCompareArticleTitle" />
         <item itemvalue="JUnit.FirstTest.firstTest" />
@@ -198,7 +214,8 @@
       <workItem from="1597931234092" duration="61000" />
       <workItem from="1597981818557" duration="1127000" />
       <workItem from="1597987474377" duration="6564000" />
-      <workItem from="1597997792090" duration="1088000" />
+      <workItem from="1597997792090" duration="1463000" />
+      <workItem from="1598003547419" duration="531000" />
     </task>
     <servers />
   </component>
@@ -235,12 +252,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12241000" />
+    <option name="totallyTimeSpent" value="13147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="978" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2603834" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2630458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -249,7 +267,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -286,8 +304,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-538">
-          <caret line="130" column="106" selection-start-line="130" selection-start-column="106" selection-end-line="130" selection-end-column="106" />
+        <state relative-caret-position="703">
+          <caret line="183" column="170" selection-start-line="183" selection-start-column="170" selection-end-line="183" selection-end-column="170" />
+          <folding>
+            <element signature="method#setUp#0;class#FirstTest#0" />
+            <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
+          </folding>
         </state>
       </provider>
     </entry>

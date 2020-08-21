@@ -136,6 +136,60 @@ public class FirstTest {
         );
     }
 
+    @Test
+    public void cancelSearch() {
+
+        waitForElementAndClick(
+                By.xpath("//*[contains(@text, 'Search Wikipedia')]"),
+                "Cannot find Search wikipedia",
+                5
+        );
+
+        waitForElementAndSendkeys(
+                By.xpath("//*[contains(@text,'Search…')]"),
+                "Can not find search element",
+                "google",
+                5
+        );
+
+        waitForElementPresent(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='American multinational Internet and technology corporation']"),
+                "Cannot find text Object-oriented programming language"
+        );
+
+        waitForElementPresent(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Web product from Google Inc. which provides detailed ground imagery']"),
+                "Cannot find text Object-oriented programming language"
+        );
+
+        waitForElementPresent(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Web browser developed by Google']"),
+                "Cannot find text Object-oriented programming language"
+        );
+
+        waitForElementAndClick(
+                By.id("org.wikipedia:id/search_close_btn"),
+                "Cannot find X button",
+                5
+
+        );
+
+        waitForElementNotPresent(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Web browser developed by Google']"),
+                "the button expected",
+                5
+        );
+
+        waitForElementNotPresent(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Web product from Google Inc. which provides detailed ground imagery']"),
+                "the button expected",
+                5
+        );
+
+
+
+    }
+
 
     private WebElement waitForElementPresent(By by, String errorMessage, long timeoutInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
