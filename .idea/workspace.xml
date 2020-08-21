@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb29c2e6-27d3-4319-819d-25988d5d7e07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,24 +27,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
+          <entry key="class" value="2" />
           <entry key="java" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
+          <entry key="CLASS" value="2" />
           <entry key="JAVA" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2161" />
+          <entry key="java" value="2940" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2161" />
+          <entry key="JAVA" value="2940" />
         </counts>
       </usages-collector>
     </session>
@@ -55,11 +54,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="183" column="170" selection-start-line="183" selection-start-column="170" selection-end-line="183" selection-end-column="170" />
+            <state relative-caret-position="1083">
+              <caret line="294" column="108" selection-start-line="294" selection-start-column="108" selection-end-line="294" selection-end-column="108" />
               <folding>
                 <element signature="method#setUp#0;class#FirstTest#0" />
                 <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
+                <element signature="method#waitForElementPresent#1;class#FirstTest#0" />
+                <element signature="method#waitForElementAndClick#0;class#FirstTest#0" />
+                <element signature="method#waitForElementAndSendkeys#0;class#FirstTest#0" />
+                <element signature="method#waitForElementNotPresent#0;class#FirstTest#0" />
+                <element signature="method#assertElementHasText#0;class#FirstTest#0" />
               </folding>
             </state>
           </provider>
@@ -116,7 +120,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598004089291" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598010199554" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -132,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FirstTest.cancelSearch">
+  <component name="RunManager" selected="JUnit.FirstTest.testFindKeyWord">
     <configuration name="FirstTest.cancelSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wikiTest" />
       <option name="PACKAGE_NAME" value="" />
@@ -153,21 +157,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest.testCancelButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wikiTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="testCancelButton" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FirstTest.testCompareArticleTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wikiTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FirstTest" />
       <option name="METHOD_NAME" value="testCompareArticleTitle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstTest.testFindKeyWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wikiTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="testFindKeyWord" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -185,18 +189,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.FirstTest.firstTest" />
-      <item itemvalue="JUnit.FirstTest.testCancelButton" />
       <item itemvalue="JUnit.FirstTest.testCompareArticleTitle" />
       <item itemvalue="JUnit.FirstTest.testTextOfSearchField" />
       <item itemvalue="JUnit.FirstTest.cancelSearch" />
+      <item itemvalue="JUnit.FirstTest.testFindKeyWord" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FirstTest.testFindKeyWord" />
         <item itemvalue="JUnit.FirstTest.cancelSearch" />
         <item itemvalue="JUnit.FirstTest.testTextOfSearchField" />
         <item itemvalue="JUnit.FirstTest.testCompareArticleTitle" />
         <item itemvalue="JUnit.FirstTest.firstTest" />
-        <item itemvalue="JUnit.FirstTest.testCancelButton" />
       </list>
     </recent_temporary>
   </component>
@@ -215,44 +219,44 @@
       <workItem from="1597981818557" duration="1127000" />
       <workItem from="1597987474377" duration="6564000" />
       <workItem from="1597997792090" duration="1463000" />
-      <workItem from="1598003547419" duration="531000" />
+      <workItem from="1598003547419" duration="3715000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 28m 02s.xml">
-      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
+    <history-entry file="FirstTest_cancelSearch - 2020.08.21 at 15h 00m 44s.xml">
+      <configuration name="FirstTest.cancelSearch" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 29m 28s.xml">
-      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
+    <history-entry file="FirstTest_cancelSearch - 2020.08.21 at 15h 01m 57s.xml">
+      <configuration name="FirstTest.cancelSearch" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 29m 50s.xml">
-      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
+    <history-entry file="FirstTest_testFindKeyWord - 2020.08.21 at 16h 09m 57s.xml">
+      <configuration name="FirstTest.testFindKeyWord" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 31m 40s.xml">
-      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
+    <history-entry file="FirstTest_testFindKeyWord - 2020.08.21 at 16h 13m 22s.xml">
+      <configuration name="FirstTest.testFindKeyWord" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 32m 22s.xml">
-      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
+    <history-entry file="FirstTest_testFindKeyWord - 2020.08.21 at 16h 25m 07s.xml">
+      <configuration name="FirstTest.testFindKeyWord" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 32m 57s.xml">
-      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
+    <history-entry file="FirstTest_testFindKeyWord - 2020.08.21 at 16h 30m 48s.xml">
+      <configuration name="FirstTest.testFindKeyWord" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 12h 33m 27s.xml">
-      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
+    <history-entry file="FirstTest_testFindKeyWord - 2020.08.21 at 16h 32m 39s.xml">
+      <configuration name="FirstTest.testFindKeyWord" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 13h 26m 00s.xml">
-      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
+    <history-entry file="FirstTest_testFindKeyWord - 2020.08.21 at 16h 33m 28s.xml">
+      <configuration name="FirstTest.testFindKeyWord" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 13h 26m 28s.xml">
-      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
+    <history-entry file="FirstTest_testFindKeyWord - 2020.08.21 at 16h 36m 34s.xml">
+      <configuration name="FirstTest.testFindKeyWord" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_testTextOfSearchField - 2020.08.21 at 13h 28m 37s.xml">
-      <configuration name="FirstTest.testTextOfSearchField" configurationId="JUnit" />
+    <history-entry file="FirstTest_testFindKeyWord - 2020.08.21 at 16h 37m 59s.xml">
+      <configuration name="FirstTest.testFindKeyWord" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13147000" />
+    <option name="totallyTimeSpent" value="16331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="978" extended-state="0" />
@@ -302,13 +306,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/java-client-4.1.2.jar!/io/appium/java_client/DefaultGenericMobileDriver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+          <folding>
+            <element signature="e#3237#3238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="183" column="170" selection-start-line="183" selection-start-column="170" selection-end-line="183" selection-end-column="170" />
+        <state relative-caret-position="1083">
+          <caret line="294" column="108" selection-start-line="294" selection-start-column="108" selection-end-line="294" selection-end-column="108" />
           <folding>
             <element signature="method#setUp#0;class#FirstTest#0" />
             <element signature="method#testCompareArticleTitle#0;class#FirstTest#0" />
+            <element signature="method#waitForElementPresent#1;class#FirstTest#0" />
+            <element signature="method#waitForElementAndClick#0;class#FirstTest#0" />
+            <element signature="method#waitForElementAndSendkeys#0;class#FirstTest#0" />
+            <element signature="method#waitForElementNotPresent#0;class#FirstTest#0" />
+            <element signature="method#assertElementHasText#0;class#FirstTest#0" />
           </folding>
         </state>
       </provider>

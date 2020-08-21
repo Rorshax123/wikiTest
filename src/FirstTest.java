@@ -126,7 +126,7 @@ public class FirstTest {
     }
 
     @Test
-    public void testTextOfSearchField(){
+    public void testTextOfSearchField() {
         assertElementHasText(
                 By.xpath("//*[@resource-id='org.wikipedia:id/search_container']//*[@text='Search Wikipedia']"),
                 "Cannot find search text",
@@ -186,7 +186,46 @@ public class FirstTest {
                 5
         );
 
+    }
 
+    @Test
+    public void testFindKeyWord() {
+
+        String text = "Google";
+
+        waitForElementAndClick(
+                By.xpath("//*[contains(@text, 'Search Wikipedia')]"),
+                "Cannot find Search wikipedia",
+                5
+        );
+
+        waitForElementAndSendkeys(
+                By.xpath("//*[contains(@text,'Search…')]"),
+                "Can not find search element",
+                text,
+                5
+        );
+
+       assertElementHasGivenText(
+               "The given text not found",
+               5,
+               text,
+               0
+       );
+
+        assertElementHasGivenText(
+                "The given text not found",
+                5,
+                text,
+                1
+        );
+
+        assertElementHasGivenText(
+                "The given text not found",
+                5,
+                text,
+                2
+        );
 
     }
 
@@ -234,18 +273,26 @@ public class FirstTest {
 
         String elementWithText = element.getText();
 
-        if(elementWithText.length() > 0)
-        Assert.assertEquals(
-                errorMessage,
-                expectedText,
-                elementWithText
-        );
+        if (elementWithText.length() > 0)
+            Assert.assertEquals(
+                    errorMessage,
+                    expectedText,
+                    elementWithText
+            );
         else {
             System.out.println("Element has not text");
             Assert.fail();
 
         }
 
+    }
+
+    private void assertElementHasGivenText(String errorMessage, long timeOutInSeconds, String text, int index){
+        WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+        wait.withMessage(errorMessage);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container' and @index=" + index + "]//*[@resource-id='org.wikipedia:id/page_list_item_title']")));
+        WebElement element = driver.findElement(By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container' and @index=" + index + "]//*[@resource-id='org.wikipedia:id/page_list_item_title']"));
+        Assert.assertTrue("The expected button has not " + text+ " text", element.getText().contains(text));
     }
 
 
