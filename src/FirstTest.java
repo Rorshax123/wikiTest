@@ -706,6 +706,35 @@ public class FirstTest {
 
     }
 
+    @Test
+    public void testAssertTitle() throws InterruptedException {
+        waitForElementAndClick(
+                By.xpath("//*[contains(@text, 'Search Wikipedia')]"),
+                "Cannot find Search wikipedia",
+                5
+        );
+
+        waitForElementAndSendkeys(
+                By.xpath("//*[contains(@text,'Search…')]"),
+                "Can not find search element",
+                "Java",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Object-oriented programming language']"),
+                "Cannot find 'Object-oriented programming language' button",
+                5
+
+        );
+
+        assertElementPresent(
+
+                By.id("org.wikipedia:id/view_page_title_text"),
+                "Java (programming language)"
+        );
+    }
+
 
     private WebElement waitForElementPresent(By by, String errorMessage, long timeoutInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
@@ -815,5 +844,16 @@ public class FirstTest {
     private String waitForElementAndGetAttribute( By by, String attribute, String errorMessage, long timeOutInSeconds){
         WebElement element = waitForElementPresent(by, errorMessage, 5);
         return element.getAttribute(attribute);
+    }
+
+    private void assertElementPresent(By by, String titleOfArticle){
+
+        WebElement element = driver.findElement(by);
+
+        String titleText = element.getText();
+
+        Assert.assertEquals("Article elements not equal", titleText, titleOfArticle);
+
+
     }
 }
