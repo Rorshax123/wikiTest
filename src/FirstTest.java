@@ -532,6 +532,180 @@ public class FirstTest {
 
     }
 
+    @Test
+    public void testSaveTwoArticles(){
+
+        waitForElementAndClick(
+                By.xpath("//*[contains(@text, 'Search Wikipedia')]"),
+                "Cannot find Search wikipedia",
+                5
+        );
+
+        waitForElementAndSendkeys(
+                By.xpath("//*[contains(@text,'Search…')]"),
+                "Can not find search element",
+                "Java",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Object-oriented programming language']"),
+                "Cannot find 'Object-oriented programming language' button",
+                5
+
+        );
+
+        waitForElementPresent(
+                By.xpath("//*[@resource-id ='org.wikipedia:id/view_page_title_text'][@text='Java (programming language)']"),
+                "Cannot find title of object oriented programming",
+                15
+        );
+
+        waitForElementAndClick(
+                By.xpath("//android.widget.ImageView[@content-desc='More options']"),
+                "Cannot find more options button",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@text='Add to reading list']"),
+                "Cannot find add to reading list button",
+                5
+        );
+
+        waitForElementAndClick(
+                By.id("org.wikipedia:id/onboarding_button"),
+                "Cannot find got it button",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@text='OK']"),
+                "Cannot find OK button",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//android.widget.ImageButton[@content-desc='Navigate up']"),
+                "Cannot find X button",
+                5
+        );
+
+        //Add second article
+
+        waitForElementAndClick(
+                By.xpath("//*[contains(@text, 'Search Wikipedia')]"),
+                "Cannot find Search wikipedia",
+                5
+        );
+
+        waitForElementAndSendkeys(
+                By.xpath("//*[contains(@text,'Search…')]"),
+                "Can not find search element",
+                "Appium",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Appius Claudius Caecus']"),
+                "Cannot find 'Appius Claudius Caecus' button",
+                5
+
+        );
+
+        waitForElementPresent(
+                By.xpath("//*[@resource-id ='org.wikipedia:id/view_page_title_text'][@text='Appius Claudius Caecus']"),
+                "Cannot find title Appius Claudius Caecus",
+                15
+        );
+
+        waitForElementAndClick(
+                By.xpath("//android.widget.ImageView[@content-desc='More options']"),
+                "Cannot find more options button",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@text='Add to reading list']"),
+                "Cannot find add to reading list button",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@resource-id = 'org.wikipedia:id/item_title'][@text='My reading list']"),
+                "Cannot find My reading list",
+                5
+        );
+//
+
+        waitForElementAndClick(
+                By.xpath("//android.widget.ImageButton[@content-desc='Navigate up']"),
+                "Cannot find X button",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//android.widget.FrameLayout[@content-desc='My lists']"),
+                "Cannot find My lists button",
+                5
+        );
+
+
+        waitForElementAndClick(
+                By.xpath("//android.widget.FrameLayout[@resource-id='org.wikipedia:id/item_container']"),
+                "Cannot find My reading list  textview",
+                5
+        );
+
+
+        //check the the articles saved or not
+        waitForElementPresent(
+                By.xpath("//*[@text='Appius Claudius Caecus']"),
+                "Cannot find added article",
+                5
+        );
+
+        waitForElementPresent(
+                By.xpath("//*[@text='Java (programming language)']"),
+                "Cannot find added article",
+                5
+        );
+
+        //delete java programming language article
+        swipeLeftFromRight(
+                By.xpath("//*[@text='Java (programming language)']"),
+                "Cannot find swipe element",
+                5
+        );
+
+        // java article should deleted
+        waitForElementNotPresent(
+                By.xpath("//*[@text='Java (programming language)']"),
+                "Cannot find added article",
+                5
+        );
+
+        //test second element should not deleted
+        waitForElementPresent(
+                By.xpath("//*[@text='Appius Claudius Caecus']"),
+                "Cannot find added article",
+                5
+        );
+
+        waitForElementAndClick(
+                By.xpath("//*[@text='Appius Claudius Caecus']"),
+                "Cannot find added article",
+                5
+        );
+
+        waitForElementPresent(
+                By.xpath("//*[@resource-id='org.wikipedia:id/view_page_title_text'][@text='Appius Claudius Caecus']"),
+                "The title of article not found",
+                10
+        );
+
+    }
+
 
     private WebElement waitForElementPresent(By by, String errorMessage, long timeoutInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
@@ -626,7 +800,7 @@ public class FirstTest {
         TouchAction action = new TouchAction(driver);
         action
                 .press(right_x, middle_y)
-                .waitAction(150)
+                .waitAction(300)
                 .moveTo(left_x, middle_y)
                 .release()
                 .perform();
