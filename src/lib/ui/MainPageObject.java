@@ -121,7 +121,7 @@ public class MainPageObject {
 
     }
 
-    public int countElements(By by) {
+    public int getCountOfElements(By by) {
         List elements = driver.findElements(by);
         return elements.size();
     }
