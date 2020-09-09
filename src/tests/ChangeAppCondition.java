@@ -37,7 +37,6 @@ public class ChangeAppCondition extends CoreTestCase {
                 elementAfterRotation,
                 elementAfterSecondRotation
         );
-
     }
 
     @Test
@@ -53,5 +52,4 @@ public class ChangeAppCondition extends CoreTestCase {
 
         SearchPageObject.waitForSearchResult("Object-oriented programming language");
     }
-
 }

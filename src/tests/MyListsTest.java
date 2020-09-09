@@ -10,6 +10,7 @@ import org.junit.Test;
 public class MyListsTest extends CoreTestCase {
     @Test
     public void testToAddNewElementToListAndDeleteIt() {
+
         SearchPageObject SearchPageObject = new SearchPageObject(driver);
         SearchPageObject.initSearchInput();
         SearchPageObject.typeSearchLine("Java");
@@ -30,6 +31,5 @@ public class MyListsTest extends CoreTestCase {
         MyListsPageObject.waitForArticleNameOnRLPresent("Java (programming language)");
         MyListsPageObject.deleteArticleFromListByName("Java (programming language)");
         MyListsPageObject.waitForArticleNameOnRLNotPresent("Java (programming language)");
-
     }
 }
