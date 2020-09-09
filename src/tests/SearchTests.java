@@ -23,8 +23,8 @@ public class SearchTests extends CoreTestCase {
         SearchPageObject SearchPageObject = new SearchPageObject(driver);
 
         SearchPageObject.initSearchInput();
-        SearchPageObject.clickToCancelButton();
-        SearchPageObject.waitForCancelButtonToClick();
+        SearchPageObject.clickToXBtn();
+        SearchPageObject.waitForXButtonToClick();
         SearchPageObject.waitForCancelButtonToDisappear();
     }
 

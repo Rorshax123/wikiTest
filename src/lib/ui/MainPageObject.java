@@ -34,7 +34,7 @@ public class MainPageObject {
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
         wait.withMessage(errorMessage);
         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(by));
-        String elementText = element.getText();
+        String elementText = element.getText().toLowerCase();
         Assert.assertTrue(elementText.contains(text));
 
     }

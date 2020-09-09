@@ -16,11 +16,16 @@ public class SearchPageObject extends MainPageObject{
         SEARCH_CLOSE_BUTTON = "org.wikipedia:id/search_close_btn",
         SEARCH_ARTICLE_ELEMENT = "//*[@resource-id='org.wikipedia:id/search_results_list']/*[@resource-id='org.wikipedia:id/page_list_item_container']",
         SEARCH_NO_RESULTS_FOUND_LABEL = "//*[@text='No results found']",
-        SEARCH_RESULT_BY_SUBSTRING_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='{SUBSTRING}']";
+        SEARCH_RESULT_BY_SUBSTRING_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='{SUBSTRING}']",
+        SEARCH_RESULT_INDEX_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_container'][@index='{INDEX}']//*[@resource-id='org.wikipedia:id/page_list_item_title']";
 
     /*TEMPLATE METHODS*/
     private static String getResultSubstring(String substring){
         return SEARCH_RESULT_BY_SUBSTRING_TPL.replace("{SUBSTRING}", substring);
+    }
+
+    private static String getElementIndex(String index){
+        return SEARCH_RESULT_INDEX_TPL.replace("{INDEX}", index);
     }
     /*TEMPLATE METHODS*/
 
@@ -42,11 +47,7 @@ public class SearchPageObject extends MainPageObject{
         this.waitForElementNotPresent(By.xpath(SEARCH_ARTICLE_ELEMENT), "Founded some elements" , 5);
     }
 
-    public void clickToCancelButton(){
-        this.waitForElementPresent(By.id(SEARCH_CLOSE_BUTTON), "Can not find search button", 5);
-    }
-
-    public void waitForCancelButtonToClick(){
+    public void waitForXButtonToClick(){
         this.waitForElementAndClick(By.id(SEARCH_CLOSE_BUTTON), "Can not click to search cancel button", 5);
     }
 
@@ -54,9 +55,33 @@ public class SearchPageObject extends MainPageObject{
         this.waitForElementNotPresent(By.id(SEARCH_CLOSE_BUTTON), "Search cancel button is still present", 5);
     }
 
+    public void waitForNoResultsFoundButton(){
+        waitForElementPresent(By.xpath(SEARCH_NO_RESULTS_FOUND_LABEL), "Can not found not results found button", 5);
+    }
+    public void waitElementOfSearchPresent(String text, String indexStartsWithZero){
+        this.waitForSearchElementPresentByText(
+                By.xpath(getElementIndex(indexStartsWithZero)),
+                text,
+                "Cannot find text "+text+"",
+                5
+        );
+    }
+
+    public void waitElementOfSearchNotPresent(String indexStartsWithZero){
+        this.waitForElementNotPresent(
+                By.xpath(getElementIndex(indexStartsWithZero)),
+                "Some elements founded by search",
+                5
+        );
+    }
+
     public void clickByArticleWithSubString(String substring){
         String searchElementXpath = getResultSubstring(substring);
         this.waitForElementAndClick(By.xpath(searchElementXpath), "Cannot click " + substring +" on search" , 10);
+    }
+
+    public void clickToXBtn(){
+        this.waitForElementAndClick(By.id(SEARCH_CLOSE_BUTTON), "Can not find search button", 5);
     }
 
     public int getAmountOfSearchArticles(){
@@ -66,9 +91,6 @@ public class SearchPageObject extends MainPageObject{
                 5
         );
         return this.getCountOfElements(By.xpath(SEARCH_ARTICLE_ELEMENT));
-    }
-    public void waitForNoResultsFoundButton(){
-        waitForElementPresent(By.xpath(SEARCH_NO_RESULTS_FOUND_LABEL), "Can not found not results found button", 5);
     }
 
 }

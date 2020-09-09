@@ -11,7 +11,7 @@ public class MyListsPageObject extends MainPageObject{
     private static final String
         ARTICLE_NAME_ON_RL = "//*[@text='Java (programming language)']",
         MY_LIST_LINK_BY_NAME_TPL = "//*[@resource-id='org.wikipedia:id/item_title'][@text='{SUBSTRING}']",
-        ARTICLE_NAME_ON_RL_TPL = "//*[@text='{SUBSTRING}']";
+        ARTICLE_NAME_ON_RL_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_title'][@text='{SUBSTRING}']";
 
     /*TEMPLATES*/
     private static String getResultSubstringOfListName(String substring){
@@ -33,10 +33,20 @@ public class MyListsPageObject extends MainPageObject{
         );
     }
 
-    public void waitForArticleNameOnRL(String substring){
+    public void waitForArticleNameOnRLPresent(String substring){
 
         String articleName = getResultSubstringOfArticleName(substring);
         this.waitForElementPresent(
+                By.xpath(articleName),
+                "Cannot find added article",
+                10
+        );
+    }
+
+    public void waitForArticleNameOnRLNotPresent(String substring){
+
+        String articleName = getResultSubstringOfArticleName(substring);
+        this.waitForElementNotPresent(
                 By.xpath(articleName),
                 "Cannot find added article",
                 5
@@ -52,11 +62,13 @@ public class MyListsPageObject extends MainPageObject{
         );
     }
 
-    public void waitForArticleNotPresentOnRL(){
-        this.waitForElementNotPresent(
-                By.xpath(ARTICLE_NAME_ON_RL),
+    public void clickToArticleOnRL(String substring){
+        String articleName = getResultSubstringOfArticleName(substring);
+        this.waitForElementAndClick(
+                By.xpath(articleName),
                 "Cannot find added article",
                 5
         );
     }
+
 }

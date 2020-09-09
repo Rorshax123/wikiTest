@@ -27,9 +27,9 @@ public class MyListsTest extends CoreTestCase {
 
         MyListsPageObject MyListsPageObject = new MyListsPageObject(driver);
         MyListsPageObject.clickToMyListByName("My reading list");
-        MyListsPageObject.waitForArticleNameOnRL("Java (programming language)");
+        MyListsPageObject.waitForArticleNameOnRLPresent("Java (programming language)");
         MyListsPageObject.deleteArticleFromListByName("Java (programming language)");
-        MyListsPageObject.waitForArticleNotPresentOnRL();
+        MyListsPageObject.waitForArticleNameOnRLNotPresent("Java (programming language)");
 
     }
 }

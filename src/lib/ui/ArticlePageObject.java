@@ -13,18 +13,22 @@ public class ArticlePageObject extends MainPageObject {
     private static final String
         ARTICLE_TITLE = "org.wikipedia:id/view_page_title_text",
         ARTICLE_FOOTER = "//*[@resource-id='org.wikipedia:id/page_external_link'][@text='View page in browser']",
-        ARTICLE_MORE_OPTIONS = "//android.widget.ImageView[@content-desc='More options']",
+        MORE_OPTIONS = "//android.widget.ImageView[@content-desc='More options']",
         /*RL reading list*/
-        MORE_OPTIONS_ADD_TO_RL = "//*[@text='Add to reading list']",
+        ADD_TO_RL = "//*[@text='Add to reading list']",
         ARTICLE_GOT_IT_BUTTON = "org.wikipedia:id/onboarding_button",
         INPUT_FIELD_OF_ADD_RL = "org.wikipedia:id/text_input",
         OK_BUTTON = "//*[@text='OK']",
         ARTICLE_X_BUTTON = "//android.widget.ImageButton[@content-desc='Navigate up']",
-        ARTICLE_TITLE_WITH_SUBSTRING_TPL = "//*[@resource-id='org.wikipedia:id/view_page_title_text'][@text='{SUBSTRING}']";
+        ARTICLE_TITLE_WITH_SUBSTRING_TPL = "//*[@resource-id='org.wikipedia:id/view_page_title_text'][@text='{SUBSTRING}']",
+        READING_LIST_TITLE_TPL = "//*[@resource-id = 'org.wikipedia:id/item_title'][@text='{SUBSTRING}']";
 
     /*TEMPLATES*/
     private static String getResultSubstring(String substring){
         return ARTICLE_TITLE_WITH_SUBSTRING_TPL.replace("{SUBSTRING}", substring);
+    }
+    private static String getNameOfRL(String substring){
+        return READING_LIST_TITLE_TPL.replace("{SUBSTRING}", substring);
     }
     /*TEMPLATES*/
 
@@ -50,13 +54,13 @@ public class ArticlePageObject extends MainPageObject {
     public void addArticleFirstTimeToReadingList(String nameOfFolder){
 
         this.waitForElementAndClick(
-                By.xpath(ARTICLE_MORE_OPTIONS),
+                By.xpath(MORE_OPTIONS),
                 "Cannot find more options button",
                 5
         );
 
         this.waitForElementAndClick(
-                By.xpath(MORE_OPTIONS_ADD_TO_RL),
+                By.xpath(ADD_TO_RL),
                 "Cannot find add to reading list button",
                 5
         );
@@ -84,6 +88,29 @@ public class ArticlePageObject extends MainPageObject {
         this.waitForElementAndClick(
                 By.xpath(OK_BUTTON),
                 "Cannot find OK button",
+                5
+        );
+
+    }
+
+    public void addArticleToReadingList(String nameOfFolder){
+
+
+        this.waitForElementAndClick(
+                By.xpath(MORE_OPTIONS),
+                "Cannot find more options button",
+                5
+        );
+
+        this.waitForElementAndClick(
+                By.xpath(ADD_TO_RL),
+                "Cannot find add to reading list button",
+                5
+        );
+
+        this.waitForElementAndClick(
+                By.xpath(getNameOfRL(nameOfFolder)),
+                "Cannot find " + nameOfFolder + " list",
                 5
         );
 
