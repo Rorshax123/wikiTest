@@ -31,15 +31,17 @@ public class FirstTest extends CoreTestCase {
                 5
         );
 
-        MainPageObject.waitForElementPresent(
-                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='American multinational Internet and technology corporation']"),
+        MainPageObject.waitForSearchElementPresentByText(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container'][@index='0']//*[@resource-id='org.wikipedia:id/page_list_item_title']"),
+                "Google",
                 "Cannot find text American multinational Internet and technology corporation",
                 5
         );
 
-        MainPageObject.waitForElementPresent(
-                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Web product from Google Inc. which provides detailed ground imagery']"),
-                "Cannot find text Web product from Google Inc. which provides detailed ground imagery",
+        MainPageObject.waitForSearchElementPresentByText(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container'][@index='1']//*[@resource-id='org.wikipedia:id/page_list_item_title']"),
+                "Google",
+                "Cannot find text American multinational Internet and technology corporation",
                 5
         );
 
@@ -52,13 +54,13 @@ public class FirstTest extends CoreTestCase {
         );
 
         MainPageObject.waitForElementNotPresent(
-                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Web browser developed by Google']"),
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container'][@index='0']//*[@resource-id='org.wikipedia:id/page_list_item_title']"),
                 "the button expected",
                 5
         );
 
         MainPageObject.waitForElementNotPresent(
-                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Web product from Google Inc. which provides detailed ground imagery']"),
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container'][@index='1']//*[@resource-id='org.wikipedia:id/page_list_item_title']"),
                 "the button expected",
                 5
         );

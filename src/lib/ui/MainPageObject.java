@@ -30,6 +30,15 @@ public class MainPageObject {
         );
     }
 
+    public void waitForSearchElementPresentByText(By by,String text, String errorMessage, long timeoutInSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
+        wait.withMessage(errorMessage);
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(by));
+        String elementText = element.getText();
+        Assert.assertTrue(elementText.contains(text));
+
+    }
+
     public WebElement waitForElementAndClick(By by, String errorMessage, long timeoutInSeconds) {
         WebElement element = waitForElementPresent(by, errorMessage, timeoutInSeconds);
         element.click();
@@ -121,16 +130,6 @@ public class MainPageObject {
 
     }
 
-    public int getCountOfElements(By by) {
-        List elements = driver.findElements(by);
-        return elements.size();
-    }
-
-    public String waitForElementAndGetAttribute( By by, String attribute, String errorMessage, long timeOutInSeconds){
-        WebElement element = waitForElementPresent(by, errorMessage, 5);
-        return element.getAttribute(attribute);
-    }
-
     public void assertElementPresent(By by, String titleOfArticle){
 
         WebElement element = driver.findElement(by);
@@ -141,4 +140,15 @@ public class MainPageObject {
 
 
     }
+
+    public int getCountOfElements(By by) {
+        List elements = driver.findElements(by);
+        return elements.size();
+    }
+
+    public String waitForElementAndGetAttribute( By by, String attribute, String errorMessage, long timeOutInSeconds){
+        WebElement element = waitForElementPresent(by, errorMessage, 5);
+        return element.getAttribute(attribute);
+    }
+
 }
