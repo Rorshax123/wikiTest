@@ -46,8 +46,6 @@ public class ArticleTests extends CoreTestCase {
     @Test
     public void testSaveTwoArticles(){
 
-        //Вот тут много субстрингами пользовался
-
         SearchPageObject SearchPageObject = new SearchPageObject(driver);
 
         SearchPageObject.initSearchInput();

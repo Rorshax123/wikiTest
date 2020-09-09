@@ -1,6 +1,7 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
+import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -17,9 +18,12 @@ public class SearchPageObject extends MainPageObject{
         SEARCH_ARTICLE_ELEMENT = "//*[@resource-id='org.wikipedia:id/search_results_list']/*[@resource-id='org.wikipedia:id/page_list_item_container']",
         SEARCH_NO_RESULTS_FOUND_LABEL = "//*[@text='No results found']",
         SEARCH_RESULT_BY_SUBSTRING_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='{SUBSTRING}']",
-        SEARCH_RESULT_INDEX_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_container'][@index='{INDEX}']//*[@resource-id='org.wikipedia:id/page_list_item_title']";
+        SEARCH_RESULT_INDEX_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_container'][@index='{INDEX}']//*[@resource-id='org.wikipedia:id/page_list_item_title']",
+        SEARCH_RESULT_TITLE_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_title'][@text='{TITLE}']",
+        SEARCH_RESULT_DESC_TPL = "//*[@resource-id = 'org.wikipedia:id/page_list_item_description'][@text='{DESC}']";
 
     /*TEMPLATE METHODS*/
+
     private static String getResultSubstring(String substring){
         return SEARCH_RESULT_BY_SUBSTRING_TPL.replace("{SUBSTRING}", substring);
     }
@@ -27,7 +31,15 @@ public class SearchPageObject extends MainPageObject{
     private static String getElementIndex(String index){
         return SEARCH_RESULT_INDEX_TPL.replace("{INDEX}", index);
     }
-    /*TEMPLATE METHODS**/
+
+    private static String getElementTitle(String title){
+        return SEARCH_RESULT_TITLE_TPL.replace("{TITLE}", title);
+    }
+
+    private static String getElementDesc(String desc){
+        return SEARCH_RESULT_DESC_TPL.replace("{DESC}", desc);
+    }
+    /*TEMPLATE METHODS*/
 
     public void initSearchInput(){
         this.waitForElementAndClick(By.xpath(SEARCH_INIT_ELEMENT), "Can not find init search element and click it",  5);
@@ -73,6 +85,13 @@ public class SearchPageObject extends MainPageObject{
                 "Some elements founded by search",
                 5
         );
+    }
+
+    public void waitForElementByTitleAndDescription(String title, String description){
+        String elementTitle = getElementTitle(title);
+        String elementDesc = getElementDesc(description);
+        this.waitForElementPresent(By.xpath(elementTitle), "Cannot find " + title +" on search" , 10);
+        this.waitForElementPresent(By.xpath(elementDesc), "Cannot find " + description +" on search" , 10);
     }
 
     public void clickByArticleWithSubString(String substring){
