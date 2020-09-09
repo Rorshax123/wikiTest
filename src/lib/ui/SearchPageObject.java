@@ -27,7 +27,7 @@ public class SearchPageObject extends MainPageObject{
     private static String getElementIndex(String index){
         return SEARCH_RESULT_INDEX_TPL.replace("{INDEX}", index);
     }
-    /*TEMPLATE METHODS*/
+    /*TEMPLATE METHODS**/
 
     public void initSearchInput(){
         this.waitForElementAndClick(By.xpath(SEARCH_INIT_ELEMENT), "Can not find init search element and click it",  5);

@@ -21,7 +21,7 @@ public class MyListsPageObject extends MainPageObject{
     private static String getResultSubstringOfArticleName(String substring){
         return ARTICLE_NAME_ON_RL_TPL.replace("{SUBSTRING}", substring);
     }
-    /*TEMPLATES*/
+    /*TEMPLATES**/
 
     public void clickToMyListByName(String substring){
 

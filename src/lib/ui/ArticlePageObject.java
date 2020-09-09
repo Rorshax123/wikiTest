@@ -30,7 +30,7 @@ public class ArticlePageObject extends MainPageObject {
     private static String getNameOfRL(String substring){
         return READING_LIST_TITLE_TPL.replace("{SUBSTRING}", substring);
     }
-    /*TEMPLATES*/
+    /*TEMPLATES**/
 
     public WebElement waitForArticleTitle(){
         WebElement element = waitForElementPresent(By.id(ARTICLE_TITLE), "Can not find article title", 10);
