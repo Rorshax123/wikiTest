@@ -127,42 +127,18 @@ public class FirstTest extends CoreTestCase {
     @Test
     public void testArticleRotation() {
 
-        MainPageObject.waitForElementAndClick(
-                By.xpath("//*[contains(@text, 'Search Wikipedia')]"),
-                "Cannot find Search wikipedia",
-                5
-        );
+        SearchPageObject SearchPageObject = new SearchPageObject(driver);
 
-        String valeOfSearch = "java";
-        MainPageObject.waitForElementAndSendkeys(
-                By.xpath("//*[contains(@text,'Search…')]"),
-                "Can not find search element",
-                valeOfSearch,
-                5
-        );
+        SearchPageObject.initSearchInput();
+        SearchPageObject.typeSearchLine("Java");
+        SearchPageObject.clickByArticleWithSubString("Object-oriented programming language");
 
-        MainPageObject.waitForElementAndClick(
-                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Object-oriented programming language']"),
-                "Cannot find 'Object-oriented programming language' button",
-                5
-        );
+        ArticlePageObject ArticlePageObject = new ArticlePageObject(driver);
+        String elementBeforeRotation = ArticlePageObject.getArticleTitle();
 
-        String elementBeforeRotation = MainPageObject.waitForElementAndGetAttribute(
-                By.id("org.wikipedia:id/view_page_title_text"),
-                "text",
-                "Can not find any element",
-                15
-        );
+        screenRotationLandscape();
 
-        driver.rotate(ScreenOrientation.LANDSCAPE);
-
-
-        String elementAfterRotation = MainPageObject.waitForElementAndGetAttribute(
-                By.id("org.wikipedia:id/view_page_title_text"),
-                "text",
-                "Can not find any element",
-                15
-        );
+        String elementAfterRotation = ArticlePageObject.getArticleTitle();
 
         Assert.assertEquals(
                 "The asserted elements not equals",
@@ -170,14 +146,9 @@ public class FirstTest extends CoreTestCase {
                 elementBeforeRotation
         );
 
-        driver.rotate(ScreenOrientation.PORTRAIT);
+        screenRotationPortrait();
 
-        String elementAfterSecondRotation = MainPageObject.waitForElementAndGetAttribute(
-                By.id("org.wikipedia:id/view_page_title_text"),
-                "text",
-                "Can not find any element",
-                15
-        );
+        String elementAfterSecondRotation = ArticlePageObject.getArticleTitle();
 
         Assert.assertEquals(
                 "The asserted elements not equals",
@@ -190,34 +161,16 @@ public class FirstTest extends CoreTestCase {
     @Test
     public void testArticleAfterReturningFromBackground(){
 
-        MainPageObject.waitForElementAndClick(
-                By.xpath("//*[contains(@text, 'Search Wikipedia')]"),
-                "Cannot find Search wikipedia",
-                5
-        );
 
-        String valeOfSearch = "java";
-        MainPageObject.waitForElementAndSendkeys(
-                By.xpath("//*[contains(@text,'Search…')]"),
-                "Can not find search element",
-                valeOfSearch,
-                5
-        );
+        SearchPageObject SearchPageObject = new SearchPageObject(driver);
 
-        MainPageObject.waitForElementPresent(
-                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Object-oriented programming language']"),
-                "Cannot find 'Object-oriented programming language' button",
-                5
-        );
+        SearchPageObject.initSearchInput();
+        SearchPageObject.typeSearchLine("Java");
+        SearchPageObject.waitForSearchResult("Object-oriented programming language");
 
-        driver.runAppInBackground(5);
+        runAppInBackground(5);
 
-
-        MainPageObject.waitForElementPresent(
-                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container']//*[@text='Object-oriented programming language']"),
-                "Cannot find 'Object-oriented programming language' button after returning from background",
-                5
-        );
+        SearchPageObject.waitForSearchResult("Object-oriented programming language");
     }
 
     @Test
