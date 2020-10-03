@@ -1,6 +1,7 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -33,7 +34,7 @@ public class ArticlePageObject extends MainPageObject {
     /*TEMPLATES**/
 
     public WebElement waitForArticleTitle(){
-        WebElement element = waitForElementPresent(By.id(ARTICLE_TITLE), "Can not find article title", 10);
+        WebElement element = waitForElementPresent(MobileBy.id(ARTICLE_TITLE), "Can not find article title", 10);
         return element;
     }
 

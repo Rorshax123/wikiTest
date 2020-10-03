@@ -7,6 +7,7 @@ import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.URL;
+import java.time.Duration;
 
 public class CoreTestCase extends TestCase {
 
@@ -21,11 +22,11 @@ public class CoreTestCase extends TestCase {
 
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("deviceName", "AndroidDevice");
-        capabilities.setCapability("platformVersion", "8.0");
+        capabilities.setCapability("platformVersion", "8.1.0");
         capabilities.setCapability("automationName", "Appium");
         capabilities.setCapability("appPackage", "org.wikipedia");
         capabilities.setCapability("appActivity", ".main.MainActivity");
-        capabilities.setCapability("app", "/Users/hasan/Desktop/wikiTest/apks/org.wikipedia.apk");
+        capabilities.setCapability("app", "/Users/ailus/Desktop/wikiTest/apks/org.wikipedia.apk");
 
         driver = new AndroidDriver(new URL(AppiumURL), capabilities);
 
@@ -50,6 +51,6 @@ public class CoreTestCase extends TestCase {
     }
 
     protected void runAppInBackground(int seconds){
-        driver.runAppInBackground(seconds);
+        driver.runAppInBackground(Duration.ofSeconds(seconds));
     }
 }
