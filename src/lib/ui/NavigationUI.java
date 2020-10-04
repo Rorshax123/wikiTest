@@ -8,12 +8,12 @@ public class NavigationUI extends MainPageObject{
         super(driver);
     }
     private static final String
-        MY_LISTS_BUTTON = "//android.widget.FrameLayout[@content-desc='My lists']";
+        MY_LISTS_BUTTON = "xpath://android.widget.FrameLayout[@content-desc='My lists']";
 
 
     public void clickToMyListsButton(){
         this.waitForElementAndClick(
-                By.xpath(MY_LISTS_BUTTON),
+                MY_LISTS_BUTTON,
                 "Cannot find My lists button",
                 5
         );

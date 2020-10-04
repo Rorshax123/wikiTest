@@ -20,17 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb29c2e6-27d3-4319-819d-25988d5d7e07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/selenium-server-standalone-3.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/lib/CoreTestCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/lib/CoreTestCase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/ArticlePageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/ArticlePageObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/MainPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/MainPageObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apks/org.wikipedia.apk" beforeDir="false" afterPath="$PROJECT_DIR$/apks/org.wikipedia.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/CoreTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/CoreTestCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/ui/ArticlePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/ArticlePageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/ui/MainPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/MainPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/SearchTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wikiTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wikiTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ui/MyListsPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/MyListsPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ui/NavigationUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/NavigationUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ui/SearchPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/SearchPageObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,9 +78,15 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.38275862" />
   </component>
-  <component name="RunManager" selected="JUnit.SearchTests.testSearchByTitleAndDesc">
-    <configuration name="MyListsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lib.ui" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ArticleTests.testCompareArticleTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wikiTest" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -91,89 +94,33 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MyListsTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ArticleTests" />
+      <option name="METHOD_NAME" value="testCompareArticleTitle" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <envs>
+        <env name="PLATFORM" value="android" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <useClassPathOnly />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <envs>
+        <env name="PLATFORM" value="android" />
+      </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wikiTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchTests.testAmountOfEmptySearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wikiTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
-      <option name="METHOD_NAME" value="testAmountOfEmptySearch" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchTests.testCancelButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wikiTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
-      <option name="METHOD_NAME" value="testCancelButton" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchTests.testSearchByTitleAndDesc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wikiTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
-      <option name="METHOD_NAME" value="testSearchByTitleAndDesc" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="JUnit.MyListsTest" />
-      <item itemvalue="JUnit.SearchTests" />
-      <item itemvalue="JUnit.SearchTests.testAmountOfEmptySearch" />
-      <item itemvalue="JUnit.SearchTests.testCancelButton" />
-      <item itemvalue="JUnit.SearchTests.testSearchByTitleAndDesc" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SearchTests.testSearchByTitleAndDesc" />
-        <item itemvalue="JUnit.SearchTests.testCancelButton" />
-        <item itemvalue="JUnit.SearchTests.testAmountOfEmptySearch" />
-        <item itemvalue="JUnit.SearchTests" />
-        <item itemvalue="JUnit.MyListsTest" />
+        <item itemvalue="JUnit.ArticleTests.testCompareArticleTitle" />
       </list>
     </recent_temporary>
   </component>
@@ -222,28 +169,37 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1878" height="250" key="GridCell.Tab.0.bottom" timestamp="1601711416746">
+    <state x="424" y="60" width="1071" height="940" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601793830291">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="424" y="60" width="1071" height="940" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.977@0.23.1920.977" timestamp="1601793830291" />
+    <state x="819" y="243" key="EnvironmentVariablesDialog" timestamp="1601793136773">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="819" y="243" key="EnvironmentVariablesDialog/0.23.1920.977@0.23.1920.977" timestamp="1601793136773" />
+    <state width="1878" height="250" key="GridCell.Tab.0.bottom" timestamp="1601793849244">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state width="1878" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1601707921122" />
-    <state width="1878" height="250" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1601711416746" />
-    <state width="1878" height="250" key="GridCell.Tab.0.center" timestamp="1601711416745">
+    <state width="1878" height="250" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1601793849244" />
+    <state width="1878" height="250" key="GridCell.Tab.0.center" timestamp="1601793849243">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state width="1878" height="250" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1601707921121" />
-    <state width="1878" height="250" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1601711416745" />
-    <state width="1878" height="250" key="GridCell.Tab.0.left" timestamp="1601711416745">
+    <state width="1878" height="250" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1601793849243" />
+    <state width="1878" height="250" key="GridCell.Tab.0.left" timestamp="1601793849242">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state width="1878" height="250" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1601707921120" />
-    <state width="1878" height="250" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1601711416745" />
-    <state width="1878" height="250" key="GridCell.Tab.0.right" timestamp="1601711416746">
+    <state width="1878" height="250" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1601793849242" />
+    <state width="1878" height="250" key="GridCell.Tab.0.right" timestamp="1601793849243">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state width="1878" height="250" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1601707921121" />
-    <state width="1878" height="250" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1601711416746" />
+    <state width="1878" height="250" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1601793849243" />
     <state x="448" y="93" key="SettingsEditor" timestamp="1601708299954">
       <screen x="0" y="23" width="1920" height="977" />
     </state>

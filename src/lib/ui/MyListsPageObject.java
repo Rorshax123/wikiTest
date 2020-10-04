@@ -9,9 +9,9 @@ public class MyListsPageObject extends MainPageObject{
     }
 
     private static final String
-        ARTICLE_NAME_ON_RL = "//*[@text='Java (programming language)']",
-        MY_LIST_LINK_BY_NAME_TPL = "//*[@resource-id='org.wikipedia:id/item_title'][@text='{SUBSTRING}']",
-        ARTICLE_NAME_ON_RL_TPL = "//*[@resource-id='org.wikipedia:id/page_list_item_title'][@text='{SUBSTRING}']";
+        ARTICLE_NAME_ON_RL = "xpath://*[@text='Java (programming language)']",
+        MY_LIST_LINK_BY_NAME_TPL = "xpath://*[@resource-id='org.wikipedia:id/item_title'][@text='{SUBSTRING}']",
+        ARTICLE_NAME_ON_RL_TPL = "xpath://*[@resource-id='org.wikipedia:id/page_list_item_title'][@text='{SUBSTRING}']";
 
     /*TEMPLATES*/
     private static String getResultSubstringOfListName(String substring){
@@ -27,7 +27,7 @@ public class MyListsPageObject extends MainPageObject{
 
         String listName = getResultSubstringOfListName(substring);
         this.waitForElementAndClick(
-                By.xpath(listName),
+                (listName),
                 "Cannot find My reading list  textview",
                 5
         );
@@ -37,7 +37,7 @@ public class MyListsPageObject extends MainPageObject{
 
         String articleName = getResultSubstringOfArticleName(substring);
         this.waitForElementPresent(
-                By.xpath(articleName),
+                (articleName),
                 "Cannot find added article",
                 10
         );
@@ -47,7 +47,7 @@ public class MyListsPageObject extends MainPageObject{
 
         String articleName = getResultSubstringOfArticleName(substring);
         this.waitForElementNotPresent(
-                By.xpath(articleName),
+                (articleName),
                 "Cannot find added article",
                 5
         );
@@ -56,7 +56,7 @@ public class MyListsPageObject extends MainPageObject{
     public void deleteArticleFromListByName(String nameOfArticle){
         String articleName = getResultSubstringOfArticleName(nameOfArticle);
         this.swipeLeftFromRight(
-                By.xpath(articleName),
+                (articleName),
                 "Cannot find swipe element",
                 5
         );
@@ -65,7 +65,7 @@ public class MyListsPageObject extends MainPageObject{
     public void clickToArticleOnRL(String substring){
         String articleName = getResultSubstringOfArticleName(substring);
         this.waitForElementAndClick(
-                By.xpath(articleName),
+                articleName,
                 "Cannot find added article",
                 5
         );
