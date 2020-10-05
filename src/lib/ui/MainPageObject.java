@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
+import lib.Platform;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -72,14 +73,6 @@ public class MainPageObject {
         );
     }
 
-    public void assertElementHasGivenText(String errorMessage, long timeOutInSeconds, String text, int index) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
-        wait.withMessage(errorMessage);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container' and @index=" + index + "]//*[@resource-id='org.wikipedia:id/page_list_item_title']")));
-        WebElement element = driver.findElement(By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_container' and @index=" + index + "]//*[@resource-id='org.wikipedia:id/page_list_item_title']"));
-        Assert.assertTrue("The expected button has not " + text + " text", element.getText().contains(text));
-    }
-
     public void swipeUp(int timeInSeconds) {
 
         TouchAction action = new TouchAction(driver);
@@ -120,11 +113,31 @@ public class MainPageObject {
 
     }
 
+    public void swipeUpTillElementFound(String locator, String erorrMessage, int maxSwipes){
+        int alreadySwiped = 0;
+        while (!this.isElementLocatedOnScreen(locator)){
+            if (alreadySwiped > maxSwipes)
+            {
+                Assert.assertTrue(erorrMessage, this.isElementLocatedOnScreen(locator));
+            }
+            swipeUpQuick();
+            ++alreadySwiped;
+        }
+    }
+
+
+    public boolean isElementLocatedOnScreen(String locator){
+        int elementLocationByY = this.waitForElementPresent(locator, "Cannot find element by locator",1 ).getLocation().getY();
+        int screenSizeByY = driver.manage().window().getSize().getHeight();
+
+        return elementLocationByY < screenSizeByY;
+    }
+
     public void swipeLeftFromRight(String locator, String errorMessage, long timeOutInSeconds) {
 
         WebElement element = waitForElementPresent(locator,
                 errorMessage,
-                5);
+                10);
 
         int left_x = element.getLocation().getX();
         int right_x = left_x + element.getSize().getWidth();
@@ -133,13 +146,32 @@ public class MainPageObject {
         int middle_y = (upper_y + lower_y) / 2;
 
         TouchAction action = new TouchAction(driver);
-        action
-                .press(PointOption.point(right_x, middle_y))
-                .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(timeOutInSeconds)))
-                .moveTo(PointOption.point(left_x, middle_y))
-                .release()
-                .perform();
+        action.press(PointOption.point(right_x, middle_y));
+        action.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(timeOutInSeconds)));
+        if (Platform.getInstance().isAndroid()){
+            action.moveTo(PointOption.point(left_x, middle_y));
+        } else {
+            int ofsetX = (-1 * element.getSize().getWidth());
+            action.moveTo(PointOption.point(ofsetX, 0));
+        }
+        action.release();
+        action.perform();
 
+    }
+
+    public void clickElementOnRigtUpperCorner(String locator, String errorMessage){
+        WebElement element = waitForElementPresent(locator + "/..", errorMessage, 5);
+
+        int rightX = element.getLocation().getX();
+        int upperY = element.getLocation().getY();
+        int lowerY = upperY + element.getSize().getHeight();
+        int middleY = (upperY + lowerY) / 2;
+        int width = element.getSize().getWidth();
+
+        int pointToClickX = (rightX + width) - 3;
+        int pointToClickY = middleY;
+        TouchAction action = new TouchAction(driver);
+        action.tap(PointOption.point(pointToClickX, pointToClickY)).perform();
     }
 
     public void assertElementPresent(String locator, String titleOfArticle){

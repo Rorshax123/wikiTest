@@ -1,28 +1,28 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
-import org.openqa.selenium.By;
+import lib.Platform;
 import org.openqa.selenium.WebElement;
 
-public class ArticlePageObject extends MainPageObject {
+abstract public class ArticlePageObject extends MainPageObject {
 
     public ArticlePageObject(AppiumDriver driver) {
         super(driver);
     }
 
-    private static final String
-        ARTICLE_TITLE = "id:org.wikipedia:id/view_page_title_text",
-        ARTICLE_FOOTER = "xpath://*[@resource-id='org.wikipedia:id/page_external_link'][@text='View page in browser']",
-        MORE_OPTIONS = "xpath://android.widget.ImageView[@content-desc='More options']",
+    protected static String
+        ARTICLE_TITLE,
+        ARTICLE_FOOTER,
+        MORE_OPTIONS,
         /*RL reading list*/
-        ADD_TO_RL = "xpath://*[@text='Add to reading list']",
-        ARTICLE_GOT_IT_BUTTON = "id:org.wikipedia:id/onboarding_button",
-        INPUT_FIELD_OF_ADD_RL = "id:org.wikipedia:id/text_input",
-        OK_BUTTON = "xpath://*[@text='OK']",
-        ARTICLE_X_BUTTON = "xpath://android.widget.ImageButton[@content-desc='Navigate up']",
-        ARTICLE_TITLE_WITH_SUBSTRING_TPL = "xpath://*[@resource-id='org.wikipedia:id/view_page_title_text'][@text='{SUBSTRING}']",
-        READING_LIST_TITLE_TPL = "xpath://*[@resource-id = 'org.wikipedia:id/item_title'][@text='{SUBSTRING}']";
+        ADD_TO_RL,
+        ARTICLE_GOT_IT_BUTTON,
+        INPUT_FIELD_OF_ADD_RL,
+        OK_BUTTON,
+        ARTICLE_CLOSE,
+        ARTICLE_TITLE_WITH_SUBSTRING_TPL,
+        READING_LIST_TITLE_TPL,
+        ARTICLE_X_BTN;
 
     /*TEMPLATES*/
     private static String getResultSubstring(String substring){
@@ -45,11 +45,21 @@ public class ArticlePageObject extends MainPageObject {
 
     public String getArticleTitle(){
         WebElement titleElement = waitForArticleTitle();
+        if (Platform.getInstance().isAndroid())
+        {
         return titleElement.getAttribute("text");
+        } else {
+            return titleElement.getAttribute("name");
+        }
     }
 
     public void swipeArticleUntilFindFooter(){
-        this.swipeUntilFindFooter(ARTICLE_FOOTER, "Can not find swipe to footer", 20);
+        if (Platform.getInstance().isAndroid()){
+        this.swipeUntilFindFooter(ARTICLE_FOOTER, "Can not find swipe to footer", 40);
+        }
+        else {
+            this.swipeUpTillElementFound(ARTICLE_FOOTER, "Cannot find swipe to footer", 40);
+        }
     }
 
     public void addArticleFirstTimeToReadingList(String nameOfFolder){
@@ -115,11 +125,21 @@ public class ArticlePageObject extends MainPageObject {
 
     }
 
-    public void closeTheArticleWithX(){
+    public void addArticlesToMySaved() throws Exception {
+        this.waitForElementAndClick(ADD_TO_RL, "Can not found add article to rl btn", 5);
+        try {
+            this.waitForElementAndClick(ARTICLE_X_BTN, "Can not find x button to disappear x btn", 5);
+        } catch (Exception e){
+
+        }
+    }
+
+    public void closeTheArticle(){
         this.waitForElementAndClick(
-                ARTICLE_X_BUTTON,
+                ARTICLE_CLOSE,
                 "Cannot find X button",
                 5
         );
     }
+
 }

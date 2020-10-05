@@ -11,7 +11,8 @@ public class WelcomePageObject extends MainPageObject{
         TITLE_SEARCH_IN_300 = "id:Search in nearly 300 languages",
         TITLE_HELP_MAKE_APP_BETTER = "id:Help make the app better",
         NEXT_BTN = "id:Next",
-        GET_STARTED_BTN = "id:Get started";
+        GET_STARTED_BTN = "id:Get started",
+        SKIP_BTN = "id:Skip";
 
     public WelcomePageObject(AppiumDriver driver) {
         super(driver);
@@ -34,6 +35,9 @@ public class WelcomePageObject extends MainPageObject{
     }
     public void clickGetStarted(){
         this.waitForElementAndClick(GET_STARTED_BTN, "Can not find 'get started' btn", 5);
+    }
+    public void clickSkip(){
+        this.waitForElementAndClick(SKIP_BTN, "Can not find 'skip' btn", 5);
     }
 
 }

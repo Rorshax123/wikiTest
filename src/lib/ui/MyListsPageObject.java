@@ -1,17 +1,18 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
+import lib.Platform;
 import org.openqa.selenium.By;
 
-public class MyListsPageObject extends MainPageObject{
+abstract public class MyListsPageObject extends MainPageObject{
     public MyListsPageObject(AppiumDriver driver) {
         super(driver);
     }
 
-    private static final String
-        ARTICLE_NAME_ON_RL = "xpath://*[@text='Java (programming language)']",
-        MY_LIST_LINK_BY_NAME_TPL = "xpath://*[@resource-id='org.wikipedia:id/item_title'][@text='{SUBSTRING}']",
-        ARTICLE_NAME_ON_RL_TPL = "xpath://*[@resource-id='org.wikipedia:id/page_list_item_title'][@text='{SUBSTRING}']";
+    protected static String
+        ARTICLE_NAME_ON_RL,
+        MY_LIST_LINK_BY_NAME_TPL,
+        ARTICLE_NAME_ON_RL_TPL;
 
     /*TEMPLATES*/
     private static String getResultSubstringOfListName(String substring){
@@ -24,7 +25,6 @@ public class MyListsPageObject extends MainPageObject{
     /*TEMPLATES**/
 
     public void clickToMyListByName(String substring){
-
         String listName = getResultSubstringOfListName(substring);
         this.waitForElementAndClick(
                 (listName),
@@ -34,7 +34,6 @@ public class MyListsPageObject extends MainPageObject{
     }
 
     public void waitForArticleNameOnRLPresent(String substring){
-
         String articleName = getResultSubstringOfArticleName(substring);
         this.waitForElementPresent(
                 (articleName),
@@ -44,7 +43,6 @@ public class MyListsPageObject extends MainPageObject{
     }
 
     public void waitForArticleNameOnRLNotPresent(String substring){
-
         String articleName = getResultSubstringOfArticleName(substring);
         this.waitForElementNotPresent(
                 (articleName),
@@ -56,10 +54,15 @@ public class MyListsPageObject extends MainPageObject{
     public void deleteArticleFromListByName(String nameOfArticle){
         String articleName = getResultSubstringOfArticleName(nameOfArticle);
         this.swipeLeftFromRight(
-                (articleName),
+                (articleName + "/.."),
                 "Cannot find swipe element",
                 5
         );
+        if (Platform.getInstance().isIOS()){
+            this.clickElementOnRigtUpperCorner(articleName, "Can not tap to delete btn");
+        }
+
+        this.waitForElementNotPresent(articleName, "Element expected on RL " + nameOfArticle, 5);
     }
 
     public void clickToArticleOnRL(String substring){
