@@ -20,33 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb29c2e6-27d3-4319-819d-25988d5d7e07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/java_client_4_1_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/lib/CoreTestCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/lib/CoreTestCase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/ArticlePageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/ArticlePageObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/MainPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/MainPageObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/MyListsPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/MyListsPageObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/NavigationUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/NavigationUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/SearchPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/SearchPageObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/WelcomePageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/lib/ui/WelcomePageObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/tests/ArticleTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/tests/ArticleTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/tests/ChangeAppCondition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/tests/ChangeAppCondition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/tests/MyListsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/tests/MyListsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/tests/SearchTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/wikiTest/tests/SearchTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wikiTest/tests/iOS/GetStarted.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/CoreTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/CoreTestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ui/ArticlePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/ArticlePageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ui/MainPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/MainPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ui/MyListsPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/MyListsPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ui/NavigationUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/NavigationUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ui/SearchPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/SearchPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ui/WelcomePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ui/WelcomePageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/ArticleTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ArticleTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/ChangeAppCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ChangeAppCondition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/MyListsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/MyListsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/SearchTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/iOS/GetStarted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/GetStarted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wikiTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/wikiTest.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,49 +76,7 @@
       <recent name="lib.ui" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyListsTest.testSaveTwoArticles">
-    <configuration name="ArticleTests.testCompareArticleTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wikiTest" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ArticleTests" />
-      <option name="METHOD_NAME" value="testCompareArticleTitle" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="" />
-      <envs>
-        <env name="PLATFORM" value="ios" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ArticleTests.testSwipeArticleUntilFindTheElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wikiTest" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ArticleTests" />
-      <option name="METHOD_NAME" value="testSwipeArticleUntilFindTheElement" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="" />
-      <envs>
-        <env name="PLATFORM" value="ios" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="MyListsTest.testSaveTwoArticles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wikiTest" />
       <useClassPathOnly />
@@ -160,28 +92,7 @@
       <option name="TEST_OBJECT" value="method" />
       <option name="PARAMETERS" value="" />
       <envs>
-        <env name="PLATFORM" value="ios" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyListsTest.testToAddNewElementToListAndDeleteIt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wikiTest" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MyListsTest" />
-      <option name="METHOD_NAME" value="testToAddNewElementToListAndDeleteIt" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="" />
-      <envs>
-        <env name="PLATFORM" value="ios" />
+        <env name="PLATFORM" value="android" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -194,7 +105,7 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="PARAMETERS" value="" />
       <envs>
-        <env name="PLATFORM" value="ios" />
+        <env name="PLATFORM" value="android" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -203,9 +114,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MyListsTest.testSaveTwoArticles" />
-        <item itemvalue="JUnit.MyListsTest.testToAddNewElementToListAndDeleteIt" />
-        <item itemvalue="JUnit.ArticleTests.testSwipeArticleUntilFindTheElement" />
-        <item itemvalue="JUnit.ArticleTests.testCompareArticleTitle" />
       </list>
     </recent_temporary>
   </component>
@@ -257,10 +165,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="424" y="60" width="1071" height="940" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601870775126">
+    <state x="424" y="60" width="1071" height="940" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601917352204">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state x="424" y="60" width="1071" height="940" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.977@0.23.1920.977" timestamp="1601870775126" />
+    <state x="424" y="60" width="1071" height="940" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.977@0.23.1920.977" timestamp="1601917352204" />
     <state x="525" y="193" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1601886687661">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
@@ -269,42 +177,42 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="819" y="243" key="EnvironmentVariablesDialog/0.23.1920.977@0.23.1920.977" timestamp="1601793136773" />
-    <state width="1878" height="250" key="GridCell.Tab.0.bottom" timestamp="1601915233859">
+    <state width="1878" height="325" key="GridCell.Tab.0.bottom" timestamp="1601917923008">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state width="1878" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1601707921122" />
-    <state width="1878" height="250" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1601915233859" />
-    <state width="1878" height="250" key="GridCell.Tab.0.center" timestamp="1601915233858">
+    <state width="1878" height="325" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1601917923008" />
+    <state width="1878" height="325" key="GridCell.Tab.0.center" timestamp="1601917923007">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state width="1878" height="250" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1601707921121" />
-    <state width="1878" height="250" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1601915233858" />
-    <state width="1878" height="250" key="GridCell.Tab.0.left" timestamp="1601915233857">
+    <state width="1878" height="325" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1601917923007" />
+    <state width="1878" height="325" key="GridCell.Tab.0.left" timestamp="1601917923007">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state width="1878" height="250" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1601707921120" />
-    <state width="1878" height="250" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1601915233857" />
-    <state width="1878" height="250" key="GridCell.Tab.0.right" timestamp="1601915233858">
+    <state width="1878" height="325" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1601917923007" />
+    <state width="1878" height="325" key="GridCell.Tab.0.right" timestamp="1601917923008">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state width="1878" height="250" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1601707921121" />
-    <state width="1878" height="250" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1601915233858" />
-    <state width="1878" height="325" key="GridCell.Tab.1.bottom" timestamp="1601912874230">
+    <state width="1878" height="325" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1601917923008" />
+    <state width="1878" height="325" key="GridCell.Tab.1.bottom" timestamp="1601917923009">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1878" height="325" key="GridCell.Tab.1.bottom/0.23.1920.977@0.23.1920.977" timestamp="1601912874230" />
-    <state width="1878" height="325" key="GridCell.Tab.1.center" timestamp="1601912874228">
+    <state width="1878" height="325" key="GridCell.Tab.1.bottom/0.23.1920.977@0.23.1920.977" timestamp="1601917923009" />
+    <state width="1878" height="325" key="GridCell.Tab.1.center" timestamp="1601917923009">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1878" height="325" key="GridCell.Tab.1.center/0.23.1920.977@0.23.1920.977" timestamp="1601912874228" />
-    <state width="1878" height="325" key="GridCell.Tab.1.left" timestamp="1601912874227">
+    <state width="1878" height="325" key="GridCell.Tab.1.center/0.23.1920.977@0.23.1920.977" timestamp="1601917923009" />
+    <state width="1878" height="325" key="GridCell.Tab.1.left" timestamp="1601917923008">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1878" height="325" key="GridCell.Tab.1.left/0.23.1920.977@0.23.1920.977" timestamp="1601912874227" />
-    <state width="1878" height="325" key="GridCell.Tab.1.right" timestamp="1601912874229">
+    <state width="1878" height="325" key="GridCell.Tab.1.left/0.23.1920.977@0.23.1920.977" timestamp="1601917923008" />
+    <state width="1878" height="325" key="GridCell.Tab.1.right" timestamp="1601917923009">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1878" height="325" key="GridCell.Tab.1.right/0.23.1920.977@0.23.1920.977" timestamp="1601912874229" />
+    <state width="1878" height="325" key="GridCell.Tab.1.right/0.23.1920.977@0.23.1920.977" timestamp="1601917923009" />
     <state x="448" y="93" key="SettingsEditor" timestamp="1601915070635">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
@@ -313,5 +221,19 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="625" y="238" key="search.everywhere.popup/0.23.1920.977@0.23.1920.977" timestamp="1601886669093" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/tests/MyListsTest.java</url>
+          <line>50</line>
+          <properties class="tests.MyListsTest" method="testSaveTwoArticles">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
